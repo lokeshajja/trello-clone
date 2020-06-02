@@ -1,0 +1,75 @@
+url designs for trello API
+
+"www.domainName.com/..."
+
+1) For the Boards which a user belongs to- 
+
+   a) to fetch the list              - GET "/user/boards"
+
+   b) to create new board            - POST "/user/boards/new"
+
+   c) for other board operations     -  PUT/PATCH/DELETE "/user/boards/<id>"
+
+
+2) for the lists belonging to a board - 
+ 
+   a) to fetch all lists           - GET "/boards/<board-id>/lists"
+
+   b) to create new list           - POST "/boards/<board-id>/lists/new"
+
+   c) for other list operations    - PUT/PATCH/DELETE "/boards/<board-id>/lists/<list-id>"
+
+
+3) for the cards belonging to a list -
+
+   a) to fetch all cards of a list   - GET "/boards/<board-id>/lists/<list-id>/cards"
+
+   b) to create new card             - POST "/boards/<board-id>/lists/<list-id>/cards/new"
+
+   c) for other card operations      - PUT/PATCH/DELETE "/boards/<board-id>/lists/<list-id>/cards/<card-id>"
+
+
+4) for the checklists of a card - 
+
+   a) to fetch all checklists of a card    - GET "/boards/<board-id>/lists/<list-id>/cards/<card-id>/checklist"
+
+   b) to create new checklist of a card    - POST "/boards/<board-id>/lists/<list-id>/cards/<card-id>/checklist/new"
+
+   c) for other checklist operations       - PUT/PATCH/DELETE "/boards/<board-id>/lists/<list-id>/cards/<card-id>/checklist/<checklist-id>"
+
+
+Common JSON Structure for the each API s 
+
+{
+    {
+  "pagination": {
+    "offset": 1,
+    "limit": 10,
+    "total": 3465,
+  },
+  "data": [
+
+      "name of the board" : "some name",
+      "owner" : "ownmer's Username",
+      "shared-by" : "[33, 33, 22, .....]" // user id s of shared people,
+      "lists-belonging-to-board : {
+          "list1" : {
+              "name" : "name of the list",
+              "title" : "title of the board"
+              // additional info of list
+          }
+          "list2" : {
+              "name" : "name of the list",
+              "title" : "title of the board"
+              // additional info of list
+          }
+      }
+
+  ],
+  "links": {
+    "next": "http://www.domain.com/... ",
+    "prev": "http://www.domain.com/....",
+    // "some links" : "other links"....
+  }
+}
+}

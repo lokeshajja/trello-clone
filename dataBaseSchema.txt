@@ -1,0 +1,64 @@
+Users - 
+
+username 
+email 
+password
+
+/////////////////////
+
+Boards - 
+
+name/title
+description
+owner
+order-of-display
+lists-id
+Members
+
+//////////////////////
+
+lists - 
+
+name/title
+description
+owner
+order-of-display
+cards-id
+
+/////////////////////////////
+
+cards -
+
+name/title
+description
+owner
+order-of-display
+checklists-id
+Comments-id
+
+/////////////////////////////
+
+checklists 
+
+card-id
+title/description
+sub-tasks- id
+
+
+//////////////////////////////
+
+sub-tasks 
+
+description
+is complete
+checklist-id
+
+/////////////////////////////////
+
+Comments
+
+card-id
+commented-by
+description
+time
+date
