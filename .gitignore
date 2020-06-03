@@ -4,7 +4,8 @@ access/__pycache__
 trelco/trelco/__pycache__/
 trelco/trelco/__pycache__/settings.cpython-36.pyc
 __pycache__
-access/migrations
+trelco/access/migrations
 trelco/access/migrations/0001_initial.py
 trelco/trelco/__pycache__/settings.cpython-36.pyc
 trelco/access/__pycache__/models.cpython-36.pyc
+trelco/access/migrations/0002_auto_20200603_1619.py
