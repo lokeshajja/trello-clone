@@ -15,6 +15,7 @@ class CommonInfo(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ['updated_at']
 
 # Create your models here.
 class Board(CommonInfo):
@@ -28,8 +29,12 @@ class Board(CommonInfo):
 
     is_public = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ['order_of_display']
+
     def __str__(self):
         return self.name
+    
 
 class List(CommonInfo):
     name = models.CharField(max_length=150, null=False, blank=False)
@@ -43,6 +48,9 @@ class List(CommonInfo):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['order_of_display']
 
 
 class Card(CommonInfo):
@@ -58,6 +66,9 @@ class Card(CommonInfo):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['order_of_display']
+
 class CheckList(CommonInfo):
     name = models.CharField(max_length=150, null=False, blank=False)
     title = models.CharField(max_length=150, null=True, blank=True)
@@ -70,6 +81,9 @@ class CheckList(CommonInfo):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['order_of_display']
 
 class SubTask(CommonInfo):
     name = models.CharField(max_length=150, null=False, blank=False)
@@ -86,6 +100,9 @@ class SubTask(CommonInfo):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['order_of_display']
+
 class Comment(CommonInfo):
     title = models.CharField(max_length=150, null=True, blank=True)
     description = models.CharField(max_length=500, null=True, blank=True)
@@ -97,3 +114,5 @@ class Comment(CommonInfo):
 
     def __str__(self):
         return self.title
+    
+
