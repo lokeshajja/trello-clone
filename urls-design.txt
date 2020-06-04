@@ -4,11 +4,11 @@ url designs for trello API
 
 1) For the Boards which a user belongs to- 
 
-   a) to fetch the list              - GET "/user/boards"
+   a) to fetch the list              - GET "/boards"
 
-   b) to create new board            - POST "/user/boards/new"
+   b) to create new board            - POST "/boards/new"
 
-   c) for other board operations     -  PUT/PATCH/DELETE "/user/boards/<id>"
+   c) for other board operations     -  PUT/PATCH/DELETE "/boards/<id>"
 
 
 2) for the lists belonging to a board - 
